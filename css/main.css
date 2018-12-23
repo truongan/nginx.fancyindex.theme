@@ -1,0 +1,40 @@
+
+tbody tr:first-child {
+  display: none;
+}
+
+h1 {
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  tr>td:nth-child(3) {
+    display: none;
+  }
+
+  thead>tr>th:nth-child(3) {
+    display: none;
+  }
+}
+
+#list a[href*="."]:before,
+#list a[href*="/"]:before,
+#list a[href~="INSTALL"]:before,
+#list a[href~="README"]:before,
+#list a[href~="CHANGELOG"]:before,
+#list a[href~="COPYING"]:before {
+  background: left center no-repeat;
+  content: "";
+  padding: 0 22px 0 0;
+}
+
+#list a[href*="."]:after,
+#list a[href*="/"]:after {
+  content: "";
+}
+
+#list a[href$="/"]:before,
+#list a[href*="/?"]:before {
+  background-image: url('../mimetypes/folder.svg') ;
+}
