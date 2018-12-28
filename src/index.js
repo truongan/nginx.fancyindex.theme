@@ -53,4 +53,4 @@ a.forEach(e => {
     console.log(x);
 });
 
-require('./history');
+require('./history.js');
