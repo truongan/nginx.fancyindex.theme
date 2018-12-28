@@ -11,13 +11,15 @@
   var breadcrumbs = '';
   var currentPath = '/';
   for (var i=0; i<segments.length; i++) {
+    search = location.search;
+    console.log(search);
     breadcrumbs += '<li class="breadcrumb-item"><a href="';
       if (segments[i] !== '') {
-        currentPath += segments[i] + '/';
-        breadcrumbs += currentPath + '">' + window.unescape(segments[i]) ;
+        currentPath += segments[i] + '/' ;
+        breadcrumbs += currentPath + search + '">' + window.unescape(segments[i]) ;
       } else if (segments.length -1 !== i) {
-        currentPath += '';
-        breadcrumbs += currentPath + '">Root' ;
+        currentPath += '' ;
+        breadcrumbs += currentPath + search + '">Root' ;
       }
     breadcrumbs += '<\/a></li>';
   }
